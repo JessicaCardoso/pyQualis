@@ -1,0 +1,1 @@
+from .sucupira import Search
