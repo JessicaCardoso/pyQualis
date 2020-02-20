@@ -22,9 +22,9 @@ class Search:
     def _filter_by(self, key, value, event):
         value = value.upper()
         if event == "triênio":
-            return self.trien[self.trien[key].str.contains(value)]
+            return self.trien[self.trien[key].str.contains(value, na=False)]
         elif event == "quadriênio":
-            return self.quadr[self.quadr[key].str.contains(value)]
+            return self.quadr[self.quadr[key].str.contains(value, na=False)]
 
     def get_last_update(self):
         return self.last_update
