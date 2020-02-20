@@ -5,27 +5,23 @@
 
 ## ⚙️ Instalando
 
-Dentro da pasta do projeto, há o seguinte nível de hierarquia:
-
-> pyQualis
-> LICENSE
-> README.md
-> requirements.txt
-> setup.py
-
-Para instalar a `pyQualis`, basta usar o comando `pip install .`. 
+Para instalar a `pyQualis`, basta realizar o download do projeto e usar o comando `pip install `. 
 
 ```bash
 foo@bar:~/pyQualis$ pip install .
+```
+
+ou apenas fazer pip diretamente deste repositório do **github**, é necessário possuir o `git`instalado.
+
+```bash
+foo@bar:~$ pip install git+https://github.com/JessicaSousa/pyQualis.git
 ```
 
 
 
 ## 📝Como usar a `pyQualis`
 
-A `pyQualis` realiza o download da tabela de dados de qualis disponíveis na página do Sucupira para todas as áreas e todos os eventos, a atualização dos arquivos locais pode ser feita através do método`update_data` disponível na classe `Search` .
-
-
+A `pyQualis` realiza o download da tabela de dados de *qualis* disponíveis na página do Sucupira para todas as áreas e todos os eventos, a atualização dos arquivos locais pode ser feita através do método`update_data` disponível na classe `Search` .
 
 ## Atualizando dados
 
@@ -60,7 +56,7 @@ trien = search.get_table(event="triênio")
 #4  2048-9803         Academic Publishing International Limited  ADMINISTRAÇÃO, CIÊNCIAS CONTÁBEIS E TURISMO   ...      B4
 ```
 
-As consultas podem ser filtradas por área, ISSN, estrato e título da revista.
+As consultas ainda podem ser filtradas de acordo com a área, ISSN, estrato e título da revista.
 
 ```python
 from pyQualis import Search
